@@ -3,13 +3,13 @@ POST http://localhost:3000/reports
 content-type: application/json
 
 {
-  "make": "Toyota",
-  "model": "Corolla",
-  "year": 1980,
-  "mileage": 100000,
+  "make": "bmw",
+  "model": "series1",
+  "year": 2020,
+  "mileage": 1000,
   "lng": 0,
   "lat": 0,
-  "price": 500000
+  "price": 8000
 }
 
 ### Update approval report
@@ -19,3 +19,6 @@ content-type: application/json
 {
   "approved": true
 }
+
+### Get an estimate for an existing vehicle
+GET http://localhost:3000/reports?make=bmw&model=series1&lng=0&lat=0&mileage=20000&year=2020
